@@ -10,8 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --white:#fbfaf7; --chalk:#f1efe8; --blue:#277a99; --deep:#1a566f; --sea:#7db8d2; --mist:#dbeef3;
-  --sun:#e3a72f; --lav:#8b7bb8; --band:#7db8d2; --band-text:#0f3a4f; --band-accent:#0f3a4f; --ink:#22303f; --script:"Parisienne","Snell Roundhand",cursive;
+  --white:#F7F2E8; --chalk:#EFE6D3; --blue:#7a6446; --deep:#4e402f; --sea:#D8C6A5; --mist:#ece3d0;
+  --sun:#e3a72f; --lav:#8b7bb8; --name:#8a7152; --band:#D8C6A5; --band-text:#3b3226; --band-accent:#3b3226; --ink:#3b3226; --script:"Parisienne","Snell Roundhand",cursive;
   --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0}
@@ -29,8 +29,8 @@ a{color:var(--blue)}
 /* nav */
 nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;
   padding:.7rem 1.4rem;transition:background .3s,box-shadow .3s}
-nav.solid{background:rgba(251,250,247,.92);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--mist)}
-nav .mark{font:2rem/1 var(--script);color:var(--lav);text-decoration:none}
+nav.solid{background:rgba(247,242,232,.92);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--mist)}
+nav .mark{font:2rem/1 var(--script);color:var(--name);text-decoration:none}
 nav ul{display:flex;gap:1.6rem;list-style:none;padding:0}
 nav ul a{text-decoration:none;color:var(--deep);font-size:.95rem;letter-spacing:.04em}
 nav ul a:hover{color:var(--sun)}
@@ -43,7 +43,7 @@ section{padding:6rem 1.4rem}
 h2{font:400 clamp(2.6rem,7vw,3.8rem)/1.1 var(--script);color:var(--blue);margin-bottom:1rem}
 h3{font:500 1.5rem/1.3 var(--serif);color:var(--deep);margin-bottom:.3rem}
 .lead{font:italic 1.35rem/1.6 var(--serif);max-width:34rem;margin:0 auto 2rem}
-.alt{background:linear-gradient(var(--chalk),var(--chalk));background-color:rgba(241,239,232,.82)}
+.alt{background:rgba(236,227,208,.72)}
 .sea{background:var(--band);color:var(--band-text)}
 .sea h2{color:var(--band-text)}.sea a{color:var(--deep)}
 
@@ -51,7 +51,7 @@ h3{font:500 1.5rem/1.3 var(--serif);color:var(--deep);margin-bottom:.3rem}
 #home{position:relative;overflow:hidden;min-height:100svh;display:grid;place-items:center;text-align:center;padding-top:5rem}
 #home .wrap{position:relative;z-index:1;padding:0 .8rem}
 #home .small{font:italic 1.3rem var(--serif);color:var(--deep)}
-.names{font:400 clamp(2.4rem,11.5vw,7.5rem)/1.2 var(--script);color:var(--lav);white-space:nowrap;margin:.6rem 0}
+.names{font:400 clamp(2.4rem,11.5vw,7.5rem)/1.2 var(--script);color:var(--name);white-space:nowrap;margin:.6rem 0}
 .names .amp{color:var(--sun);padding:0 .1em}
 .date{font:500 1.25rem var(--serif);letter-spacing:.18em;color:var(--deep)}
 .btns{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:2.2rem}
@@ -79,35 +79,35 @@ h3{font:500 1.5rem/1.3 var(--serif);color:var(--deep);margin-bottom:.3rem}
 
 /* countdown: Kythnos sunset (swap class "sunset" for "wall" on #countdown to go back to the arches) */
 .sunset{background:radial-gradient(circle at 50% 80%,rgba(255,238,205,.75),transparent 46%),
-  linear-gradient(180deg,#f7e0c8 0%,#efc8c0 28%,#c4aed6 62%,#8fc3da 100%);color:#0f3a4f}
+  linear-gradient(180deg,#f7e0c8 0%,#efc8c0 28%,#c4aed6 62%,#8fc3da 100%);color:#3b3226}
 .sunset h2{color:var(--deep)}
 .sunset .count{align-items:center;gap:0;margin-top:2rem}
 .sunset .arch{width:auto;height:auto;min-width:0;padding:0 clamp(.7rem,3.4vw,2.4rem);border:0;border-radius:0;outline:0;background:none;box-shadow:none}
-.sunset .arch:not(:first-child){border-left:1px solid rgba(15,58,79,.28)}
-.sunset .count b{font-size:clamp(2.2rem,9.5vw,4.8rem);color:#0f3a4f;text-shadow:0 1px 14px rgba(255,255,255,.45)}
-.sunset .count span{font-size:clamp(.68rem,2.4vw,.95rem);color:#0f3a4f}
+.sunset .arch:not(:first-child){border-left:1px solid rgba(59,50,38,.28)}
+.sunset .count b{font-size:clamp(2.2rem,9.5vw,4.8rem);color:#3b3226;text-shadow:0 1px 14px rgba(255,255,255,.45)}
+.sunset .count span{font-size:clamp(.68rem,2.4vw,.95rem);color:#3b3226}
 .sunset .count .lav{display:none}
 
 /* countdown: sea band with drifting waves (swap class "waves" for "sunset" or "wall" on #countdown to change look) */
-.waves{position:relative;overflow:hidden;padding:9rem 1.4rem;background:linear-gradient(#86c0d8,#6fb0cd);color:#0f3a4f}
+.waves{position:relative;overflow:hidden;padding:9rem 1.4rem;background:linear-gradient(#dfcfae,#d0bb94);color:#3b3226}
 .waves .wrap{position:relative;z-index:1}
-.waves h2{color:#0f3a4f}
+.waves h2{color:#3b3226}
 .waves .count{align-items:center;gap:0;margin-top:2rem}
 .waves .arch{width:auto;height:auto;padding:0 clamp(.7rem,3.4vw,2.4rem);border:0;border-radius:0;outline:0;background:none;box-shadow:none}
-.waves .arch:not(:first-child){border-left:1px solid rgba(15,58,79,.3)}
-.waves .count b{font-size:clamp(2.2rem,9.5vw,4.8rem);color:#0f3a4f}
-.waves .count span{font-size:clamp(.68rem,2.4vw,.95rem);color:#0f3a4f}
+.waves .arch:not(:first-child){border-left:1px solid rgba(59,50,38,.3)}
+.waves .count b{font-size:clamp(2.2rem,9.5vw,4.8rem);color:#3b3226}
+.waves .count span{font-size:clamp(.68rem,2.4vw,.95rem);color:#3b3226}
 .waves .count .lav{display:none}
 .wv{position:absolute;left:0;right:0;height:84px;overflow:hidden;pointer-events:none}
 .wv.top{top:-1px}.wv.bot{bottom:-1px}
 .wv i{position:absolute;left:0;width:200%;background-repeat:repeat-x;background-size:50% 100%;animation:drift linear infinite}
 @keyframes drift{to{transform:translateX(-50%)}}
-.wv.top i:nth-child(1){top:0;height:100%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30C200 0 400 0 600 30S1000 60 1200 30V0H0Z' fill='%23d4eaf2' fill-opacity='0.55'/%3E%3C/svg%3E");animation-duration:70s;animation-delay:-12s;animation-direction:normal}
-.wv.top i:nth-child(2){top:0;height:78%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30C200 0 400 0 600 30S1000 60 1200 30V0H0Z' fill='%23e9f4f8' fill-opacity='0.75'/%3E%3C/svg%3E");animation-duration:48s;animation-delay:-30s;animation-direction:reverse}
-.wv.top i:nth-child(3){top:0;height:56%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30C200 0 400 0 600 30S1000 60 1200 30V0H0Z' fill='%23fbfaf7' fill-opacity='1'/%3E%3C/svg%3E");animation-duration:34s;animation-delay:-5s;animation-direction:normal}
-.wv.bot i:nth-child(1){bottom:0;height:100%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30C200 0 400 0 600 30S1000 60 1200 30V60H0Z' fill='%23d4eaf2' fill-opacity='0.55'/%3E%3C/svg%3E");animation-duration:70s;animation-delay:-12s;animation-direction:normal}
-.wv.bot i:nth-child(2){bottom:0;height:78%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30C200 0 400 0 600 30S1000 60 1200 30V60H0Z' fill='%23e9f4f8' fill-opacity='0.75'/%3E%3C/svg%3E");animation-duration:48s;animation-delay:-30s;animation-direction:reverse}
-.wv.bot i:nth-child(3){bottom:0;height:56%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30C200 0 400 0 600 30S1000 60 1200 30V60H0Z' fill='%23fbfaf7' fill-opacity='1'/%3E%3C/svg%3E");animation-duration:34s;animation-delay:-5s;animation-direction:normal}
+.wv.top i:nth-child(1){top:0;height:100%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30C200 0 400 0 600 30S1000 60 1200 30V0H0Z' fill='%23ecdfc3' fill-opacity='0.55'/%3E%3C/svg%3E");animation-duration:70s;animation-delay:-12s;animation-direction:normal}
+.wv.top i:nth-child(2){top:0;height:78%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30C200 0 400 0 600 30S1000 60 1200 30V0H0Z' fill='%23f4ead6' fill-opacity='0.75'/%3E%3C/svg%3E");animation-duration:48s;animation-delay:-30s;animation-direction:reverse}
+.wv.top i:nth-child(3){top:0;height:56%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30C200 0 400 0 600 30S1000 60 1200 30V0H0Z' fill='%23F7F2E8' fill-opacity='1'/%3E%3C/svg%3E");animation-duration:34s;animation-delay:-5s;animation-direction:normal}
+.wv.bot i:nth-child(1){bottom:0;height:100%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30C200 0 400 0 600 30S1000 60 1200 30V60H0Z' fill='%23ecdfc3' fill-opacity='0.55'/%3E%3C/svg%3E");animation-duration:70s;animation-delay:-12s;animation-direction:normal}
+.wv.bot i:nth-child(2){bottom:0;height:78%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30C200 0 400 0 600 30S1000 60 1200 30V60H0Z' fill='%23f4ead6' fill-opacity='0.75'/%3E%3C/svg%3E");animation-duration:48s;animation-delay:-30s;animation-direction:reverse}
+.wv.bot i:nth-child(3){bottom:0;height:56%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30C200 0 400 0 600 30S1000 60 1200 30V60H0Z' fill='%23F7F2E8' fill-opacity='1'/%3E%3C/svg%3E");animation-duration:34s;animation-delay:-5s;animation-direction:normal}
 @media (max-width:760px){.waves{padding:7.5rem 1rem}.wv{height:60px}}
 /* little sailing boat, carried along by the front wave at the bottom of the band */
 .boat{position:absolute;left:50%;top:50%;width:clamp(36px,7vw,56px);transform:translate(-50%,-90%);animation:boatfade 34s linear -5s infinite}
@@ -117,7 +117,7 @@ h3{font:500 1.5rem/1.3 var(--serif);color:var(--deep);margin-bottom:.3rem}
 @media (prefers-reduced-motion:reduce){.wv i{animation:none}.boat{left:25%;animation:none;opacity:1}.boat svg{animation:none;transform:rotate(3deg)}}
 
 /* photos */
-.ph{position:relative;aspect-ratio:4/5;background:repeating-linear-gradient(45deg,var(--mist),var(--mist) 12px,#e8f0f6 12px,#e8f0f6 24px);
+.ph{position:relative;aspect-ratio:4/5;background:repeating-linear-gradient(45deg,var(--mist),var(--mist) 12px,#f4ecdd 12px,#f4ecdd 24px);
   border:1.5px dashed var(--sea);border-radius:200px 200px 8px 8px;display:grid;place-items:center;overflow:hidden;
   color:var(--blue);font:italic 1.1rem var(--serif);text-align:center;padding:1rem}
 .ph.wide{aspect-ratio:16/10;border-radius:8px}
@@ -142,14 +142,14 @@ h3{font:500 1.5rem/1.3 var(--serif);color:var(--deep);margin-bottom:.3rem}
 /* form */
 form{max-width:34rem;margin:2rem auto 0;text-align:left;display:grid;gap:1.1rem}
 label{font-size:.95rem;color:var(--deep);display:grid;gap:.3rem}
-input,select,textarea{font:inherit;padding:.75rem .9rem;border:1.5px solid var(--sea);border-radius:10px;background:#fff;color:var(--ink);width:100%}
+input,select,textarea{font:inherit;padding:.75rem .9rem;border:1.5px solid #c8b38a;border-radius:10px;background:#fff;color:var(--ink);width:100%}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--mist)}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .radio{display:flex;gap:1.4rem;flex-wrap:wrap}
 .radio label{display:flex;align-items:center;gap:.5rem;grid-template:none}
 .radio input{width:auto}
 #thanks{display:none;max-width:34rem;margin:2rem auto 0;padding:2rem;background:var(--mist);border-radius:14px;font:italic 1.3rem var(--serif)}
-footer{padding:3rem 1.4rem;text-align:center;font:2.4rem var(--script);color:var(--lav)}
+footer{padding:3rem 1.4rem;text-align:center;font:2.4rem var(--script);color:var(--name)}
 footer small{display:block;font:300 .85rem var(--sans);color:var(--ink);margin-top:.4rem}
 
 /* lavender */
@@ -249,11 +249,11 @@ footer small{display:block;font:300 .85rem var(--sans);color:var(--ink);margin-t
 <section id="countdown" class="waves center">
   <div class="wv top" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wv bot" aria-hidden="true"><i></i><i></i><i><span class="boat"><svg viewBox="0 0 60 56" aria-hidden="true">
-      <path d="M31 8L52 36H31Z" fill="#fffaf0" stroke="#277a99" stroke-width="1.2" stroke-linejoin="round"/>
+      <path d="M31 8L52 36H31Z" fill="#fffaf0" stroke="#7a6446" stroke-width="1.2" stroke-linejoin="round"/>
       <path d="M28 12L10 36H28Z" fill="#a595d0" stroke="#7566a3" stroke-width="1.2" stroke-linejoin="round"/>
-      <path d="M30 5V39" stroke="#1a566f" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M30 5V39" stroke="#4e402f" stroke-width="1.8" stroke-linecap="round"/>
       <path d="M30.5 5L39 7.8L30.5 10.6Z" fill="#e3a72f"/>
-      <path d="M5 39H55C53 47 47 52 39 52H21C13 52 7 47 5 39Z" fill="#277a99"/>
+      <path d="M5 39H55C53 47 47 52 39 52H21C13 52 7 47 5 39Z" fill="#7a6446"/>
       <path d="M7.4 43H52.6" stroke="#e3a72f" stroke-width="2.2" stroke-linecap="round"/>
       <circle cx="24" cy="47.4" r="1.6" fill="#fffaf0"/><circle cx="36" cy="47.4" r="1.6" fill="#fffaf0"/>
     </svg></span></i></div>
@@ -314,7 +314,7 @@ footer small{display:block;font:300 .85rem var(--sans);color:var(--ink);margin-t
 
 <div class="div" aria-hidden="true"><i></i><svg class="lav" aria-hidden="true"><use href="#lav"/></svg><i></i></div>
 
-<section id="getting-there" class="sea">
+<section id="getting-there" class="alt">
   <div class="wrap center">
     <h2 class="rv">How to get to Kythnos</h2>
     <p class="lead rv d1">The island is reached by ferry. Book early &mdash; July is high season.</p>
