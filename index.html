@@ -110,7 +110,7 @@ h3{font:500 1.5rem/1.3 var(--serif);color:var(--deep);margin-bottom:.3rem}
 .wv.bot i:nth-child(3){bottom:0;height:56%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30C200 0 400 0 600 30S1000 60 1200 30V60H0Z' fill='%23F7F2E8' fill-opacity='1'/%3E%3C/svg%3E");animation-duration:34s;animation-delay:-5s;animation-direction:normal}
 @media (max-width:760px){.waves{padding:7.5rem 1rem}.wv{height:60px}}
 /* little sailing boat, carried along by the front wave at the bottom of the band */
-.boat{position:absolute;left:50%;top:50%;width:clamp(36px,7vw,56px);transform:translate(-50%,-90%);animation:boatfade 34s linear -5s infinite}
+.boat{position:absolute;left:50%;top:50%;width:clamp(46px,8vw,64px);transform:translate(-50%,-90%);animation:boatfade 34s linear -5s infinite}
 .boat svg{display:block;width:100%;height:auto;transform-origin:50% 92%;animation:bob 3.4s ease-in-out infinite alternate}
 @keyframes bob{from{transform:translateY(1px) rotate(-9deg)}to{transform:translateY(-3px) rotate(-2deg)}}
 @keyframes boatfade{0%{opacity:0}8%{opacity:1}92%{opacity:1}100%{opacity:0}}
@@ -152,6 +152,21 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);bo
 footer{padding:3rem 1.4rem;text-align:center;font:2.4rem var(--script);color:var(--name)}
 footer small{display:block;font:300 .85rem var(--sans);color:var(--ink);margin-top:.4rem}
 
+/* playmobil-style figurines */
+.fig{display:block;width:100%;height:auto;overflow:visible;cursor:pointer;transform-origin:50% 100%}
+.fl{animation:flick .8s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes flick{to{transform:scale(1.14,.9) rotate(3deg)}}
+@keyframes sway{from{transform:rotate(-1.6deg)}to{transform:rotate(1.6deg)}}
+@keyframes hop{40%{transform:translateY(-14px)}}
+.stage{position:relative}
+.pair{display:flex;justify-content:center;align-items:flex-end;gap:clamp(.8rem,3vw,2rem);width:max-content;max-width:100%;margin:2rem auto 0;padding:0 1.4rem;border-bottom:3px solid var(--sea)}
+.pair .stage{width:clamp(52px,11vw,84px)}
+.pair .fig{animation:sway 3.2s ease-in-out infinite alternate}
+.pair .stage:last-child .fig{animation-delay:-1.6s}
+.fig.lit{filter:drop-shadow(0 0 8px #ffb84a)}
+.fig.hop{animation:hop .5s ease}
+.spark{position:absolute;left:78%;top:28%;width:5px;height:5px;border-radius:50%;background:#f7b32b;pointer-events:none;animation:spark .7s ease-out forwards}
+@keyframes spark{to{transform:translate(var(--dx),var(--dy));opacity:0}}
 /* lavender */
 .lav{display:block;width:28px;height:84px;flex:none;overflow:visible}
 .div{position:relative;z-index:3;display:flex;align-items:center;justify-content:center;gap:1rem;margin:-42px 0;padding:0 1.4rem}
@@ -219,6 +234,39 @@ footer small{display:block;font:300 .85rem var(--sans);color:var(--ink);margin-t
   </symbol>
 </svg>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="hestia" viewBox="0 0 60 120">
+    <path d="M13 31C13 6 47 6 47 31L50 58H10Z" fill="#4a72b0"/>
+    <path d="M14 46Q14 42 20 42H40Q46 42 46 46V70L49 112H11L14 70Z" fill="#f7f3ea" stroke="#e1d9c6" stroke-width=".8"/>
+    <ellipse cx="11" cy="50" rx="6" ry="8" fill="#f7f3ea"/><ellipse cx="49" cy="50" rx="6" ry="8" fill="#f7f3ea"/>
+    <rect x="7" y="55" width="8" height="20" rx="4" fill="#f6d6c4"/><rect x="45" y="55" width="8" height="20" rx="4" fill="#f6d6c4"/>
+    <circle cx="11" cy="76" r="4.6" fill="#f6d6c4"/><circle cx="49" cy="76" r="4.6" fill="#f6d6c4"/>
+    <path d="M20 42Q30 55 40 42Z" fill="#d9a935"/>
+    <path d="M22 42H32L47 74L42 80L28 58Z" fill="#4a72b0"/><path d="M20 56L34 64L36 110H18Z" fill="#3f66a3"/>
+    <ellipse cx="24" cy="114" rx="5" ry="2.5" fill="#f6d6c4"/><ellipse cx="36" cy="114" rx="5" ry="2.5" fill="#f6d6c4"/>
+    <circle cx="30" cy="31" r="12" fill="#f6d6c4"/>
+    <path d="M18 29C20 16 40 16 42 29C36 23 24 23 18 29Z" fill="#6b4430"/>
+    <circle cx="25.5" cy="31" r="1.6" fill="#5c3523"/><circle cx="34.5" cy="31" r="1.6" fill="#5c3523"/>
+    <path d="M26 36Q30 39.5 34 36" fill="none" stroke="#5c3523" stroke-width="1.4" stroke-linecap="round"/>
+    <path class="fl" d="M11 64C7.5 69 8 73 11 75C14 73 14.5 69 11 64Z" fill="#f7b32b"/>
+  </symbol>
+  <symbol id="hephaestus" viewBox="0 0 60 120">
+    <rect x="5" y="46" width="10" height="27" rx="5" fill="#d9843d"/><rect x="45" y="46" width="10" height="27" rx="5" fill="#d9843d"/>
+    <path d="M16 42H44L47 104H13Z" fill="#5a3a28"/>
+    <rect x="4.5" y="62" width="11" height="5" rx="1.5" fill="#7a5238"/><rect x="44.5" y="62" width="11" height="5" rx="1.5" fill="#7a5238"/>
+    <rect x="17" y="104" width="10" height="9" rx="2" fill="#6b4630"/><rect x="33" y="104" width="10" height="9" rx="2" fill="#6b4630"/>
+    <ellipse cx="22" cy="114" rx="6" ry="2.5" fill="#a8683e"/><ellipse cx="38" cy="114" rx="6" ry="2.5" fill="#a8683e"/>
+    <circle cx="10" cy="76" r="4.8" fill="#e2812d"/><circle cx="50" cy="76" r="4.8" fill="#e2812d"/>
+    <rect x="48.8" y="36" width="2.4" height="46" fill="#222"/><rect x="43" y="31" width="13" height="6" rx="1" fill="#333"/>
+    <circle cx="30" cy="30" r="12" fill="#c97a45"/>
+    <path d="M16 30C11 8 49 8 44 30C46 22 40 14 30 14C20 14 14 22 16 30Z" fill="#1d1a1a"/>
+    <path d="M17 26C20 14 40 14 43 26C36 20 24 20 17 26Z" fill="#1d1a1a"/>
+    <circle cx="25.5" cy="29" r="1.8" fill="#4a2a18"/><circle cx="34.5" cy="29" r="1.8" fill="#4a2a18"/>
+    <path d="M18 33C18 50 42 50 42 33C38 40 22 40 18 33Z" fill="#1d1a1a"/>
+    <path d="M27 40Q30 42 33 40" fill="none" stroke="#c97a45" stroke-width="1.2" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
 <div id="bg" aria-hidden="true"><svg id="sunflower" viewBox="-200 -200 400 400"></svg></div>
 
 <nav id="nav">
@@ -239,10 +287,10 @@ footer small{display:block;font:300 .85rem var(--sans);color:var(--ink);margin-t
     <p class="small rv">Together with their families</p>
     <h1 class="names rv d1">Nikos <span class="amp">&amp;</span> Kalliopi</h1>
     <p class="date rv d2">10 JULY 2027 &nbsp;·&nbsp; KYTHNOS, GREECE</p>
-    <div class="btns rv d3">
+    <div class="btns rv d2">
       <a class="btn" href="#rsvp">RSVP</a>
-      <a class="btn ghost" href="#getting-there">How do I get to Kythnos?</a>
     </div>
+    <div class="pair rv d3"><div class="stage"><svg class="fig" viewBox="0 0 60 120" aria-hidden="true"><use href="#hephaestus" width="60" height="120"/></svg></div><div class="stage"><svg class="fig" viewBox="0 0 60 120" aria-hidden="true"><use href="#hestia" width="60" height="120"/></svg></div></div>
   </div>
 </header>
 
@@ -256,6 +304,7 @@ footer small{display:block;font:300 .85rem var(--sans);color:var(--ink);margin-t
       <path d="M5 39H55C53 47 47 52 39 52H21C13 52 7 47 5 39Z" fill="#7a6446"/>
       <path d="M7.4 43H52.6" stroke="#e3a72f" stroke-width="2.2" stroke-linecap="round"/>
       <circle cx="24" cy="47.4" r="1.6" fill="#fffaf0"/><circle cx="36" cy="47.4" r="1.6" fill="#fffaf0"/>
+      <use href="#hephaestus" x="13" y="14" width="12" height="25"/><use href="#hestia" x="34" y="14" width="12" height="25"/>
     </svg></span></i></div>
   <div class="wrap">
     <h2 class="rv">Counting the days</h2>
@@ -432,6 +481,21 @@ links.addEventListener("click", e => { if (e.target.tagName === "A") { links.cla
 /* ---------- reveal on scroll ---------- */
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.15});
 document.querySelectorAll(".rv").forEach(el => io.observe(el));
+
+/* ---------- figurines ---------- */
+(function(){
+  document.addEventListener("click",e=>{
+    const f=e.target.closest("svg.fig"); if(!f) return;
+    const who=f.querySelector("use").getAttribute("href");
+    f.classList.remove("hop"); void f.offsetWidth; f.classList.add("hop"); setTimeout(()=>f.classList.remove("hop"),500);
+    if(who==="#hephaestus"){
+      const host=f.closest(".stage")||f.parentNode;
+      for(let i=0;i<9;i++){const s=document.createElement("i"); s.className="spark";
+        const a=Math.random()*Math.PI-Math.PI; s.style.setProperty("--dx",Math.cos(a)*34+"px"); s.style.setProperty("--dy",Math.sin(a)*34+"px");
+        host.appendChild(s); setTimeout(()=>s.remove(),750);}
+    } else { f.classList.add("lit"); setTimeout(()=>f.classList.remove("lit"),1400); }
+  });
+})();
 
 /* ---------- RSVP ---------- */
 document.getElementById("rsvpForm").addEventListener("submit", async e => {
